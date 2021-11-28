@@ -1,34 +1,50 @@
-Contribution: 2021-10-09 20:00
+### HI, There
 
-Contribution: 2021-10-10 20:00
+### Compile and Deploy Contracts
+- make sure you have solana installed
+- make sure you have rust installed
+- install phantom wallet on the browser or any from the list
+- make sure u have a solana wallet with SOL token (devnet)
+- Config to devnet
 
-Contribution: 2021-10-12 20:00
+```
+solana config set --url devnet
+```
+- Create wallet
+```
+solana-keygen new
+```
+- Add test token to the wallet
 
-Contribution: 2021-10-13 20:00
+```
+solana airdrop 5
+```
+navigate to the rust folder
+```
+cd rust
+```
+build the project
+```
+cargo build-bpf
+```
+- After the build step completes, deploy the program to devnet
+```
+solana program deploy ./path/to/the_program.so -u devnet
+```
+- Clear js/packages/web/.env variables to create of a fresh new store
 
-Contribution: 2021-10-13 20:01
+- start the app
+```
+cd ../js/packages
+yarn && yarn bootstrap
+yarn start
+```
 
-Contribution: 2021-10-14 20:00
+# Open the site in a browser 
 
-Contribution: 2021-10-15 20:00
-
-Contribution: 2021-10-15 20:01
-
-Contribution: 2021-10-15 20:02
-
-Contribution: 2021-10-17 20:00
-
-Contribution: 2021-10-19 20:00
-
-Contribution: 2021-10-19 20:01
-
-Contribution: 2021-10-20 20:00
-
-Contribution: 2021-10-20 20:01
-
-Contribution: 2021-10-24 20:00
-
-Contribution: 2021-10-24 20:01
-
-Contribution: 2021-10-24 20:02
-
+```
+http://localhost:3000
+```
+- Now connect wallet
+- Create NFT
+- Sell NFT
